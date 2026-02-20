@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    background: url("gotica.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: #e5e5e5;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: rgba(0,0,0,0.85);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+header {
+    text-align: center; padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    width: 220px;
+    text-align: center;
+    border-left: 5px solid crimson;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.card.acertijo {
+    border-left-color: green;
+}
+
+.card a {
+    display: block;
+    margin-top: 15px;
+    color: crimson;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+    background: rgba(0,0,0,0.85);
+}
