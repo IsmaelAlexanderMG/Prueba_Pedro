@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    background: black;
+    color: #dcdcdc;
+    font-family: 'Courier New', monospace;
+}
+
+nav {
+    background: #0a0a0a;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 6px;
+}
+
+/* IMAGEN CÓMIC SUPERIOR DERECHA */
+.comic-top {
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    max-width: 260px;
+    z-index: 2;
+}
+
+.comic-top img {
+    width: 100%;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* LAYOUT PRINCIPAL */
+.comic-layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    align-items: center;
+}
+
+.comic-img img {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+.comic-info {
+    flex: 1;
+}
+
+.comic-dialogo {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+ul li {
+    margin: 12px 0;
+}
+
+.terminal {
+    max-width: 900px;
+    margin: auto;
+    background: #050505;
+    padding: 20px;
+    border-left: 4px solid gray;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+    header {
+        padding: 60px 20px 40px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .comic-top {
+        position: static;
+        margin: 20px auto;
+        max-width: 200px;
+    }
+
+    .comic-layout {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .comic-img img {
+        max-width: 100%;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .terminal {
+        margin: 20px;
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, #000, #111);
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: crimson;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+}
+
+nav a::after {
+    background: #888;
+}
+
+nav a:hover {
+    color: #ccc;
+}

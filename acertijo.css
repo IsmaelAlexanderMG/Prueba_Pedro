@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background: #061006;
+    color: #c8ffc8;
+    font-family: 'Courier New', monospace;
+}
+
+nav {
+    background: #020702;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #9aff9a;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #2aff2a;
+    letter-spacing: 5px;
+}
+
+section {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+}
+
+.puzzle {
+    background: #020702;
+    padding: 30px;
+    border: 1px solid #2aff2a;
+    text-align: center;
+}
+
+.puzzle input {
+    padding: 10px;
+    width: 80%;
+    background: black;
+    color: #9aff9a;
+    border: 1px solid #2aff2a;
+}
+
+.puzzle button {
+    padding: 10px 20px;
+    background: #2aff2a;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #ff4d4d;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+    header {
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .puzzle input {
+        width: 100%;
+    }
+
+    .puzzle {
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, #000, #111);
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: crimson;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+}
+
+nav {
+    background: linear-gradient(90deg, #020702, #061006);
+}
+
+nav a {
+    color: #9aff9a;
+}
+
+nav a::after {
+    background: #2aff2a;
+}
+
+nav a:hover {
+    color: #2aff2a;
+}
