@@ -13,19 +13,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repositorio
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Instalar Node
-        uses: actions/setup-node@v3
+      - name: Instalar Java
+        uses: actions/setup-java@v3
         with:
-          node-version: '18'
+          distribution: 'temurin'
+          java-version: '17'
 
-      - name: Instalar validador HTML
-        run: npm install -g html-validator-cli
+      - name: Descargar validador vnu.jar
+        run: |
+          wget https://github.com/validator/validator/releases/latest/download/vnu.jar
 
       - name: Validar HTML
-        run: html-validator --file=./index.html
+        run: |
+          java -jar vnu.jar index.html
 
   deploy:
     needs: build-and-test
@@ -34,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Deploy a GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
